@@ -15,8 +15,14 @@ html, body, ul {
 
     --sidebar-block-button-color: rgb(15, 15, 15);
 
-    --style1-border-color1: rgb(255, 24, 159);
-    --style1-border-color2: rgb(190, 24, 255);
+    --style1-border-color1: rgb(255, 133, 20);
+    --style1-border-color2: rgb(255, 24, 24);
+
+    --style2-border-color1: rgb(32, 255, 24);
+    --style2-border-color2: rgb(24, 170, 255);
+
+    --style3-border-color1: rgb(113, 24, 255);
+    --style3-border-color2: rgb(255, 24, 224);
 }
 
 .btn {
@@ -252,7 +258,7 @@ html, body, ul {
 }
 
 
-/* colorstyle rb */
+/* #region colorstyle 1 */
 .sidebar-block.color-style-1 .nav-item:nth-child(even) {
     border: var(--style1-border-color1) solid;
     border-width: 0 0 0 .2em;
@@ -273,19 +279,52 @@ html, body, ul {
     border-width: 0 0 0 .4em; 
 }
 
-/* colorstyle rb end */
+/* #endregion colorstyle 1 end */
 
-/* #endregion sidebar block */
-
-
-/* #region sidebar colors */
-
-/* .sidebar[color1] {
-    --border: attr(color1);
+/* #region colorstyle 2 */
+.sidebar-block.color-style-2 .nav-item:nth-child(even) {
+    border: var(--style2-border-color1) solid;
+    border-width: 0 0 0 .2em;
 }
 
-.sidebar[color2] {
-    --border: attr(color2);
-} */
+.sidebar-block.color-style-2 .nav-item:nth-child(odd) {
+    border: var(--style2-border-color2) solid;
+    border-width: 0 0 0 .2em;
+}
+
+.sidebar-block.color-style-2 .nav-item[active]:nth-child(even) {
+    border: var(--style2-border-color1) solid;
+    border-width: 0 0 0 .4em; 
+}
+
+.sidebar-block.color-style-2 .nav-item[active]:nth-child(odd) {
+    border: var(--style2-border-color2) solid;
+    border-width: 0 0 0 .4em;
+}
+
+/* #endregion colorstyle 2 end */
+
+/* #region colorstyle 3 */
+.sidebar-block.color-style-3 .nav-item:nth-child(even) {
+    border: var(--style3-border-color1) solid;
+    border-width: 0 0 0 .2em;
+}
+
+.sidebar-block.color-style-3 .nav-item:nth-child(odd) {
+    border: var(--style3-border-color2) solid;
+    border-width: 0 0 0 .2em;
+}
+
+.sidebar-block.color-style-3 .nav-item[active]:nth-child(even) {
+    border: var(--style3-border-color1) solid;
+    border-width: 0 0 0 .4em; 
+}
+
+.sidebar-block.color-style-3 .nav-item[active]:nth-child(odd) {
+    border: var(--style3-border-color2) solid;
+    border-width: 0 0 0 .4em; 
+}
+
+/* #endregion colorstyle 3 end */
 
 /* #endregion sidebar block */
