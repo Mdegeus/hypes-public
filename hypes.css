@@ -172,6 +172,17 @@ html, body, ul {
 
 /*#endregion*/
 
+/* #region page content*/
+
+.page-content {
+    width: auto;
+    height: auto;
+    transition: padding .5s;
+}
+
+/* #endregion page content*/
+
+
 /* #region sidebar base */
 
 .sidebar * {
@@ -362,8 +373,148 @@ html, body, ul {
 
 /* #endregion sidebar block */
 
-/* #region modal */
+/* #region modal base */
 
+.modal * {
+    z-index: 10000000;
+}
 
+.modal {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
 
-/* #endregion modal */
+.modal.shadow > .modal-content {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-content {
+    padding: 1em;
+    margin: 1em;
+    width: clamp(100px, 80%, 800px);
+    height: clamp(300px, fit-content, 600px);
+    background-color: white;
+    border: 2px solid black;
+    border-radius: .5em;
+}
+
+.modal-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-content * {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.modal button {
+    border: none;
+    border-radius: .3em;
+    background-color: rgb(52, 164, 255);
+    color: white;
+    padding: .4em 2.4em;
+}
+
+.modal.fade *{
+    animation: fade .12s linear;
+}
+
+.modal.jump > .modal-content{
+    animation: jump .25s ease-in-out; 
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: scale(.95);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* #endregion modal base */
+
+/* #region modal alert */
+
+.modal.modal-alert {
+    height: 100%;
+    width: 100%;
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-title.modal-alert {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-alert .modal-content {
+    padding: 1em;
+    margin: 1em;
+    width: clamp(100px, 80%, 500px);
+    height: clamp(300px, fit-content, 600px);
+    background-color: white;
+    border-radius: 0;
+    border: none;
+}
+
+.modal-alert .modal-content * {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.modal.fade *{
+    animation: fade .12s linear;
+}
+
+.modal.jump > .modal-content{
+    animation: jump .25s ease-in-out; 
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: scale(.95);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* #endregion modal alert */
