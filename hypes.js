@@ -56,38 +56,38 @@ if (document.querySelector(".sidebar-toggle")) {
     });
 }
 
-if (document.querySelector(".modal-alert")) {
-    const alerts = document.querySelectorAll(".modal-alert");
+if (document.querySelector(".dock-alert")) {
+    const alerts = document.querySelectorAll(".dock-alert");
 
-    alerts.forEach(alertModal => {
+    alerts.forEach(alertdock => {
 
-        console.log("found alert Modal");
+        console.log("found alert dock");
 
-        if (alertModal.getAttribute('remember')) {
-            if (localStorage.getItem('alert' + alertModal.id)) {
-                alertModal.remove();
+        if (alertdock.getAttribute('remember')) {
+            if (localStorage.getItem('alert' + alertdock.id)) {
+                alertdock.remove();
                 console.log("remove");
             } else {
-                localStorage.setItem('alert' + alertModal.id, true);
-                console.log("found alert Modal");
+                localStorage.setItem('alert' + alertdock.id, true);
+                console.log("found alert dock");
             }
         }
 
     });
 }
 
-if (document.querySelector(".modal-button")) {
+if (document.querySelector(".dock-button")) {
 
-    const buttons = document.querySelectorAll(".modal-button");
+    const buttons = document.querySelectorAll(".dock-button");
 
     buttons.forEach(button => {
 
-        const targetName = button.getAttribute('modal-id');
+        const targetName = button.getAttribute('dock-id');
 
         button.addEventListener("click", () => {
-            if (modal = document.querySelector('#' + targetName)) {
-                const modal = document.querySelector('#' + targetName);
-                modal.style.display = "flex";
+            if (dock = document.querySelector('#' + targetName)) {
+                const dock = document.querySelector('#' + targetName);
+                dock.style.display = "flex";
             }
         })
 
@@ -96,17 +96,17 @@ if (document.querySelector(".modal-button")) {
     });
 }
 
-if (document.querySelector(".modal-close")) {
+if (document.querySelector(".dock-close")) {
 
-    const buttons = document.querySelectorAll(".modal-close");
+    const buttons = document.querySelectorAll(".dock-close");
 
     buttons.forEach(button => {
 
-        const targetName = button.getAttribute('modal-id');
+        const targetName = button.getAttribute('dock-id');
 
         button.addEventListener("click", () => {
-            const modal = document.querySelector('#' + targetName);
-            modal.style.display = "none";
+            const dock = document.querySelector('#' + targetName);
+            dock.style.display = "none";
         })
 
         sidebarChangeState(targetName, null);

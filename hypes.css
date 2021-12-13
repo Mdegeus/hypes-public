@@ -373,23 +373,23 @@ html, body, ul {
 
 /* #endregion sidebar block */
 
-/* #region modal base */
+/* #region dock base */
 
-.modal * {
+.dock * {
     z-index: 10000000;
 }
 
-.modal {
+.dock {
     height: 100%;
     width: 100%;
     display: none;
 }
 
-.modal.shadow > .modal-content {
+.dock.shadow > .dock-content {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.modal-content {
+.dock-content {
     padding: 1em;
     margin: 1em;
     width: clamp(100px, 80%, 800px);
@@ -404,13 +404,13 @@ html, body, ul {
     transform: translate(-50%, -50%);
 }
 
-.modal-container {
+.dock-container {
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-.modal-title {
+.dock-title {
     font-weight: bold;
     text-align: center;
     font-size: 2em;
@@ -418,11 +418,11 @@ html, body, ul {
     margin: 0;
 }
 
-.modal-content * {
+.dock-content * {
     font-family: 'Ubuntu', sans-serif;
 }
 
-.modal button {
+.dock button {
     border: none;
     border-radius: .3em;
     background-color: rgb(52, 164, 255);
@@ -430,7 +430,7 @@ html, body, ul {
     padding: .4em 2.4em;
 }
 
-.modal.fade *{
+.dock.fade *{
     animation: fade .12s linear, slide .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
@@ -446,11 +446,11 @@ html, body, ul {
     }
 }
 
-/* #endregion modal base */
+/* #endregion dock base */
 
-/* #region modal alert */
+/* #region dock alert */
 
-.modal.modal-alert {
+.dock.dock-alert {
     height: 100%;
     width: 100%;
     position: fixed;
@@ -459,7 +459,7 @@ html, body, ul {
     align-items: center;
 }
 
-.modal-title.modal-alert {
+.dock-title.dock-alert {
     font-weight: bold;
     text-align: center;
     font-size: 2em;
@@ -467,7 +467,7 @@ html, body, ul {
     margin: 0;
 }
 
-.modal-alert .modal-content {
+.dock-alert .dock-content {
     padding: 1em;
     margin: 1em;
     width: clamp(100px, 80%, 500px);
@@ -478,8 +478,8 @@ html, body, ul {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.modal-alert .modal-content * {
+.dock-alert .dock-content * {
     font-family: 'Ubuntu', sans-serif;
 }
 
-/* #endregion modal alert */
+/* #endregion dock alert */
