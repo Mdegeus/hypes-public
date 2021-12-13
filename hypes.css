@@ -430,7 +430,7 @@ html, body, ul {
     padding: .4em 2.4em;
 }
 
-.dock.fade *{
+.dock.slide *{
     animation: fade .12s linear, slide .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
