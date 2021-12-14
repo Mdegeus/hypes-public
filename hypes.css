@@ -213,6 +213,7 @@ html, body {
 .sidebar * {
     margin: 0;
     padding: 0;
+    font-family: initial;
 }
 
 .sidebar {
