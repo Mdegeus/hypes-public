@@ -61,8 +61,6 @@ if (document.querySelector(".dock-alert")) {
 
     alerts.forEach(alertdock => {
 
-        console.log("found alert dock");
-
         if (alertdock.getAttribute('remember')) {
             if (localStorage.getItem('alert' + alertdock.id)) {
                 alertdock.remove();
@@ -70,6 +68,15 @@ if (document.querySelector(".dock-alert")) {
             } else {
                 localStorage.setItem('alert' + alertdock.id, true);
                 console.log("found alert dock");
+            }
+        }
+
+        if (alertdock.getAttribute('autoclose')) {
+            const sec = alertdock.getAttribute('autoclose');
+            if (!isNaN(sec)) {
+                setInterval(() => {
+                    alertdock.style.display = 'none';
+                }, sec*1000)
             }
         }
 
