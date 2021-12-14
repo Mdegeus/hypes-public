@@ -64,10 +64,8 @@ if (document.querySelector(".dock-alert")) {
         if (alertdock.getAttribute('remember')) {
             if (localStorage.getItem('alert' + alertdock.id)) {
                 alertdock.remove();
-                console.log("remove");
             } else {
                 localStorage.setItem('alert' + alertdock.id, true);
-                console.log("found alert dock");
             }
         }
 
@@ -119,4 +117,73 @@ if (document.querySelector(".dock-close")) {
         sidebarChangeState(targetName, null);
 
     });
+}
+
+if (document.querySelector(".loadingscreen")) {
+    
+    const loadingscreen = document.querySelector(".loadingscreen");
+
+    if (loadingscreen.getAttribute("loadingtime")) {
+        const loadingtime = loadingscreen.getAttribute("loadingtime");
+
+        document.body.style.height = "100vh";
+        document.body.style.width = "100vw";
+
+        setTimeout(() => {
+            setTimeout(() => {
+                loadingscreen.classList.add("remove-fade");
+                setTimeout(() => {
+                    loadingscreen.remove();
+                    document.body.style.height = "100%";
+                    document.body.style.width = "100%";
+                }, 500)
+            }, 500)
+        }, loadingtime)
+
+        if (loadingscreen.getAttribute("progressbar-id")) {
+            
+            const progressbar = document.querySelector("#" + loadingscreen.getAttribute("progressbar-id"));
+
+            if (progressbar) {
+                for (let i = 0; i < loadingtime; i++) {
+                    setTimeout(() => {
+                        progressbar.setAttribute('progress', ((95/loadingtime)*i+5));
+                    },i)
+                }
+            }
+        }
+
+    }
+
+}
+
+if (document.querySelector(".progressbar")) {
+    const progressbars = document.querySelectorAll(".progressbar");
+    
+    progressbars.forEach(progressbar => {
+        const bar = document.createElement("div");
+
+        bar.className = "bar";
+
+        progressbar.appendChild(bar);
+
+        const progress = progressbar.getAttribute("progress")
+
+        if (progress) {
+            setInterval(() => {
+                let progress = progressbar.getAttribute("progress");
+                bar.style.width = (progress) + "%";
+            }, 2)
+        }
+    });
+
+}
+
+if (document.querySelector(".text-sequence")) {
+    const items = document.querySelector(".text-sequence");
+
+    items.forEach(item => {
+        
+    });
+    
 }
