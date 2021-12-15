@@ -135,7 +135,7 @@ if (document.querySelector(".loadingscreen")) {
                 loadingscreen.classList.add("remove-fade");
                 setTimeout(() => {
                     loadingscreen.remove();
-                    html.style.overflow = "scroll";
+                    html.style.overflow = "initial";
                 }, 500)
             }, 500)
         }, loadingtime)
