@@ -46,8 +46,20 @@ html, body {
     margin: 1em;
 }
 
+.offset {
+    margin: 5%;
+}
+
 .center-text {
     text-align: center;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.right-text {
+    text-align: right;
 }
 
 .btn {
