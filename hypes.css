@@ -242,14 +242,11 @@ html, body {
     width: 200px;
     height: 100vh;
     display: flex;
+    position: fixed;
     flex-direction: column;
     background-color:rgb(27, 27, 27);
     transition: left .5s;
     left: -200px;
-}
-
-.sidebar.sidebar-fixed {
-    position: fixed;
 }
 
 .sidebar-list {
