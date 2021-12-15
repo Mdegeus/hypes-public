@@ -61,7 +61,7 @@ if (document.querySelector(".dock-alert")) {
 
     alerts.forEach(alertdock => {
 
-        if (alertdock.getAttribute('remember')) {
+        if (alertdock.getAttribute('remember') != undefined) {
             if (localStorage.getItem('alert' + alertdock.id)) {
                 alertdock.remove();
             } else {
