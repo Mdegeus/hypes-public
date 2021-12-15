@@ -31,23 +31,23 @@ html, body {
 }
 
 .br {
-    margin: 1em 0;
+    padding: 1em 0;
 }
 
 .br-t {
-    margin-top: 1em;
+    padding-top: 1em;
 }
 
 .br-b {
-    margin-bottom: 1em;
+    padding-bottom: 1em;
 }
 
 .br-all {
-    margin: 1em;
+    padding: 1em;
 }
 
 .offset {
-    margin: 5%;
+    padding: 5%;
 }
 
 .center-text {
