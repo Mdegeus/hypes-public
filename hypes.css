@@ -84,7 +84,12 @@ html, body {
     background-color: var(--simple-primary);
     width: 100%;
     height: fit-content;
+    position: absolute;
     margin: 0 0 1em 0;
+}
+
+.navbar.fixed {
+    position: fixed;
 }
 
 .nav-list {
