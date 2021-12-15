@@ -120,22 +120,22 @@ if (document.querySelector(".dock-close")) {
 }
 
 if (document.querySelector(".loadingscreen")) {
+
+    const html = document.querySelector("html");
+
+    html.style.overflow = "hidden";
     
     const loadingscreen = document.querySelector(".loadingscreen");
 
     if (loadingscreen.getAttribute("loadingtime")) {
         const loadingtime = loadingscreen.getAttribute("loadingtime");
 
-        document.body.style.height = "100vh";
-        document.body.style.width = "100vw";
-
         setTimeout(() => {
             setTimeout(() => {
                 loadingscreen.classList.add("remove-fade");
                 setTimeout(() => {
                     loadingscreen.remove();
-                    document.body.style.height = "100%";
-                    document.body.style.width = "100%";
+                    html.style.overflow = "scroll";
                 }, 500)
             }, 500)
         }, loadingtime)
