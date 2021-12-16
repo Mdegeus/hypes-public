@@ -187,3 +187,20 @@ if (document.querySelector(".text-sequence")) {
     });
     
 }
+
+if (document.querySelector(".tag")) {
+    const tags = document.querySelectorAll(".tag");
+    
+    tags.forEach(tag => {
+        if (tag.parentElement.getAttribute("tag-character") != undefined && !tag.getAttribute("tag-character")) {
+            const char = tag.parentElement.getAttribute("tag-character");
+            tag.textContent = char + tag.textContent
+        }
+
+        if (tag.getAttribute("tag-character") != undefined) {
+            const char = tag.getAttribute("tag-character");
+            tag.textContent = char + tag.textContent
+        }
+    });
+
+}
