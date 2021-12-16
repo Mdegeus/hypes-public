@@ -92,6 +92,7 @@ html, body {
 }
 
 .navbar {
+    top: 0;
     padding: 1em 0;
     background-color: var(--simple-primary);
     width: 100%;
@@ -234,6 +235,7 @@ html, body {
 /* #region page content*/
 
 .page-content {
+    top: 0;
     width: auto;
     height: auto;
     transition: padding .5s;
@@ -250,6 +252,7 @@ html, body {
 }
 
 .sidebar {
+    top: 0;
     width: 200px;
     height: 100vh;
     display: flex;
