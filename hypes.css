@@ -746,7 +746,7 @@ html, body {
 }
 
 .tag.border {
-    border: 2px solid black;
+    border: 2px solid var(--tag-background-color);
 }
 
 .tag.glow {
