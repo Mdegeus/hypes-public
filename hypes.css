@@ -31,19 +31,19 @@ html, body {
 }
 
 .br {
-    padding: 1em 0;
+    margin: 1em 0;
 }
 
 .br-t {
-    padding-top: 1em;
+    margin-top: 1em;
 }
 
 .br-b {
-    padding-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .br-all {
-    padding: 1em;
+    margin: 1em;
 }
 
 .offset {
