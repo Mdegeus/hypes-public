@@ -67,6 +67,18 @@ html, body {
     margin: 0 auto;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
 .btn {
     width: fit-content;
     height: fit-content;
@@ -228,7 +240,6 @@ html, body {
 }
 
 /* #endregion page content*/
-
 
 /* #region sidebar base */
 
@@ -689,4 +700,106 @@ html, body {
 }
 
 /* #endregion progress glow */
+
+/* #region tags*/
+
+.tag {
+    --tag-background-color: rgb(37, 37, 37);
+    --tag-glow-color: var(--tag-background-color);
+    padding: .1em .3em;
+    background-color: var(--tag-background-color);
+    margin: 0 .2em;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    transition: background-color .5s, box-shadow .5s;
+}
+
+/* #endregion tags */
+
+/* #region tag styling / positioning */
+
+.flex-row.center-tags, .flex-column.center-tags {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row.center-tags-v, .flex-column.center-tags-v {
+    justify-content: center;
+}
+
+.flex-row.center-tags-h, .flex-column.center-tags-h {
+    align-items: center;
+}
+
+
+.tag.round {
+    border-radius: 1em;
+    padding: .2em .6em
+}
+
+.tag.border {
+    border: 2px solid black;
+}
+
+.tag.glow {
+    box-shadow: 0 0 5px var(--tag-glow-color);
+}
+
+.tag.overglow {
+    box-shadow: 0 0 5px var(--tag-glow-color), 0 0 5px var(--tag-glow-color);
+}
+
+/* #endregion tag styling / positioning */
+
+/* #region tag colors*/
+
+.tag.dark{
+    background-color: rgb(37, 37, 37);
+}
+
+.tag.light{
+    background-color: white;
+    color: rgb(24, 24, 24);
+}
+
+.tag.light.glow {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px var(--tag-glow-color);
+}
+
+.tag.red {
+    --tag-background-color: rgb(255, 41, 41);
+}
+
+.tag.orange {
+    --tag-background-color: rgb(255, 156, 43);
+}
+
+.tag.yellow {
+    --tag-background-color: rgb(255, 240, 36);
+}
+
+.tag.green {
+    --tag-background-color: rgb(61, 255, 43);
+}
+
+.tag.light-blue {
+    --tag-background-color: rgb(43, 241, 255);
+}
+
+.tag.blue {
+    --tag-background-color: rgb(43, 64, 255);
+}
+
+.tag.purple {
+    --tag-background-color: rgb(177, 43, 255);
+}
+
+.tag.pink {
+    --tag-background-color: rgb(255, 43, 227);
+}
+
+/* #endregion tag colors */
 
