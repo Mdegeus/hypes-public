@@ -712,6 +712,7 @@ html, body {
 .tag {
     --tag-background-color: rgb(37, 37, 37);
     --tag-glow-color: var(--tag-background-color);
+    white-space: nowrap;
     padding: .1em .3em;
     background-color: var(--tag-background-color);
     margin: 0 .2em;
